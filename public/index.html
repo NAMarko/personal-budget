@@ -8,6 +8,7 @@
     <title>Personal Budget</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="main.css">
+    Access-Control-Allow-Origin;
 </head>
 <body>
 
@@ -30,7 +31,7 @@
         <div class="page-area">
 
             <div class="text-box">
-                <h1>Stay on track</h1>
+                <h1>Stay on Track</h1>
                 <p>
                     Do you know where you are spending your money? If you really stop to track it down,
                     you would get surprised! Proper budget management depends on real data... and this
@@ -98,11 +99,7 @@
 
     </div>
 
-    <!-- <div class="bottom">
-        <div class="center">
-            All rights reserved &copy; Fabio Nolasco
-        </div>
-    </div> -->
+    
 
     <!--This footer is a semantic element-->
     <footer>
@@ -142,7 +139,7 @@
         }
 
         function getBudget() {
-            axios.get('/budget')
+            axios.get('http://localhost:3000/budget')
             .then(function (res) {
                 console.log(res);
                 for (var i=0; i < res.data.myBudget.length; i++) {
